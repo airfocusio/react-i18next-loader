@@ -14,7 +14,6 @@ module.exports = function(content) {
   const output = `var i18next = require('i18next').default;
 var reactI18next = require('react-i18next');
 var translations = ${JSON.stringify(translations)};
-console.log(translations);
 Object.keys(translations).forEach(function(lng) {
   i18next.addResourceBundle(lng, ${JSON.stringify(namespace)}, translations[lng]);
 });
