@@ -1,0 +1,12 @@
+{
+  "name": "@choffmeister/react-i18next-loader",
+  "version": "0.0.1",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "dependencies": {
+    "@types/i18next": "^12.1.0",
+    "i18next": ">=15",
+    "react-i18next": ">=10"
+  },
+  "license": "MIT"
+}
