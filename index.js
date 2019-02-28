@@ -8,7 +8,11 @@ module.exports = function(content) {
   this.value = content
 
   const filename = path.basename(this.resourcePath)
-  const namespace = filename.substr(0, filename.length - extension.length)
+  const hash = crypto
+    .createHash('sha1')
+    .update(content)
+    .digest('base64')
+  const namespace = filename.substr(0, filename.length - extension.length) + '__' + hash.substr(0, 5)
   const translations = convertToLanguageFirst(JSON.parse(content))
 
   const output = `var i18next = require('i18next').default;
