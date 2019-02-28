@@ -1,3 +1,4 @@
+const crypto = require('crypto')
 const path = require('path')
 const { convertToLanguageFirst } = require('./utils')
 
