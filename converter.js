@@ -5,8 +5,8 @@ const glob = require('glob')
 const path = require('path')
 const yargs = require('yargs')
 
-const globPattern = path.resolve(__dirname, 'packages/airfocus-*/src/**/*.i18n')
-const mergedPath = path.resolve(__dirname, 'i18n-merged.json')
+const globPattern = path.resolve('**/*.i18n')
+const mergedPath = path.resolve('translations.json')
 yargs
   .usage('usage: $0 <command>')
   .command('merge', 'merges individual .i18n files into a single .json file', runAsync(async () => {
