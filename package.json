@@ -7,15 +7,21 @@
     "react-i18next-loader-cli": "./bin/react-i18next-loader-cli"
   },
   "scripts": {
-    "format": "prettier '**/*.js' --write"
+    "format": "prettier '**/*.js' --write",
+    "test": "jest"
   },
   "dependencies": {
     "@types/i18next": "^12.1.0",
     "glob": "^7.1.3",
     "i18next": ">=15",
-    "prettier": "^1.16.4",
     "react-i18next": ">=10",
     "yargs": "^13.2.1"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^24.7.1",
+    "prettier": "^1.16.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  }
 }

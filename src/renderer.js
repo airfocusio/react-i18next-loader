@@ -17,7 +17,7 @@ module.exports = function renderer(filepath, content) {
   const translations = convertToLanguageFirst(JSON.parse(content));
 
   return `var i18next = require('i18next').default;
-var reactI18next = require('react-i18next');
+var enhancedUseTranslation = require('./enhancedUseTranslation');
 var translations = ${JSON.stringify(translations)};
 var namespace = ${JSON.stringify(namespace)};
 Object.keys(translations).forEach(function(lng) {
@@ -27,7 +27,7 @@ module.exports = {
   namespace: namespace,
   translations: translations,
   useTranslation: function() {
-    return reactI18next.useTranslation(namespace);
+    return enhancedUseTranslation(namespace);
   },
 };
 `;
